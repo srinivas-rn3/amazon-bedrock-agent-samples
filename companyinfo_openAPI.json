@@ -1,0 +1,80 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Company Information API",
+    "version": "1.0.0",
+    "description": "API for retrieving internal company information like user status and project codes."
+  },
+  "paths": {
+    "/get_user_status": {
+      "get": {
+        "summary": "Get the current status of a user.",
+        "description": "Use this function to find out if a user is Active, On-Leave, or Inactive. You must provide the user's ID.",
+        "operationId": "getUserStatus",
+        "parameters": [
+          {
+            "name": "user_id",
+            "in": "query",
+            "description": "The unique identifier for the user (e.g., user100, user200).",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Status retrieved successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/get_project_code": {
+      "get": {
+        "summary": "Look up an internal project code.",
+        "description": "Use this function to find the official internal code for a project, such as 'ProjectPhoenix' or 'ProjectTitan'.",
+        "operationId": "getProjectCode",
+        "parameters": [
+          {
+            "name": "project_name",
+            "in": "query",
+            "description": "The name of the project (e.g., ProjectPhoenix).",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Project code retrieved successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "project_code": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
