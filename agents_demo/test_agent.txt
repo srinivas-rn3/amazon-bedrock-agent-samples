@@ -1,0 +1,52 @@
+
+Test 1: The "John Smith" Redemption Test
+
+This is the most important one. It's the prompt that was failing before. A successful response here will prove the new instructions are working.
+
+"Can you pull the CRM details for John Smith?"
+
+Expected Outcome:
+
+
+
+
+Test 2: The "Golden Path" Formatting Test
+
+Let's ensure the full, multi-step process also adheres to the new formatting rules.
+
+"Give me a full briefing for my meeting with Global Tech Inc."
+
+Expected Outcome:
+
+
+
+Test 3: The "Minimalist Request" Test
+
+This prompt is very short. Let's see if the agent, now named BRIEF-AI, handles it with the same professional structure.
+
+"Jane Doe briefing"
+
+Expected Outcome:
+
+
+
+Test 4: The "Not Found" Graceful Failure Test
+
+How does our new, more confident agent handle a request for someone who doesn't exist? It should be clear and direct, not overly apologetic.
+
+"Tell me about our account with 'Innovate Corp'."
+
+
+
+
+
+"
+
+Test 5: The "Knowledge Base Only" Test
+
+Let's test if the agent can correctly identify a request that only requires the Knowledge Base, proving it understands the separation of duties.
+
+"What was the estimated cost of Project Titan?"
+
+Expected Outcome:
+

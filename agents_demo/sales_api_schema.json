@@ -1,0 +1,72 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Sales Assistant CRM API",
+    "version": "1.0.0",
+    "description": "API for retrieving customer contacts and sales opportunities from the CRM."
+  },
+  "paths": {
+    "/customer": {
+      "post": {
+        "summary": "Get CRM Data by Company or Contact Name",
+        "description": "Fetches key contacts and open opportunities. Can be searched by providing EITHER a company name OR a contact's name.",
+        "operationId": "getCustomerData",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "properties": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "name": {
+                          "type": "string",
+                          "description": "The name of the parameter. Can be 'companyName' or 'contactName'."
+                        },
+                        "type": {
+                          "type": "string",
+                          "description": "The data type of the parameter, e.g., 'string'"
+                        },
+                        "value": {
+                          "type": "string",
+                          "description": "The value of the company or contact name to look up."
+                        }
+                      },
+                      "required": ["name", "type", "value"]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successfully retrieved customer data.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "key_contacts": {
+                      "type": "array",
+                      "items": { "type": "object" }
+                    },
+                    "open_opportunities": {
+                      "type": "array",
+                      "items": { "type": "object" }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+Project Proposal: Project Titan for Global Tech Inc.
+Date: June 15, 2023
+Executive Summary: This project proposes a full migration of Global Tech's legacy database systems to a cloud-native architecture on AWS. The primary goal is to increase performance by 50% and reduce operational costs by 30%.
+Key Deliverables:
+- Phase 1: Infrastructure setup and security hardening.
+- Phase 2: Data migration and validation.
+- Phase 3: Application cutover and performance tuning.
+Total Estimated Cost: $450,000

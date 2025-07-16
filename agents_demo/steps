@@ -1,0 +1,30 @@
+Navigate to the Amazon Bedrock console.
+In the left menu, under Orchestration, click Agents.
+Click Create Agent.
+Agent details:
+Name: ProactiveSalesAssistant
+Description: (Optional) "Agent to assist sales reps with meeting prep."
+Select model: Choose a powerful model. Anthropic Claude 3 Sonnet is an excellent and cost-effective choice for this task.
+Instructions for the Agent: This is the most important prompt! It tells the agent its personality and how to think. Use this: refer instruction.txt
+
+
+ction groups:
+Click Add.
+Action group name: CRM_API_Tool
+Lambda function: Select the salesDemo-getCustomerData function you created.
+Select API schema: Choose "Select an S3 bucket" and browse to the sales_api_schema.json file you uploaded.
+Click Add.
+Knowledge base:
+Click Add.
+Select data source: Choose the S3 bucket (yourname-sales-demo-kb-...) where you uploaded the .txt files.
+Vector database: For a quick demo, choose Quick create a new vector store. This will automatically set up an Amazon OpenSearch Serverless collection for you.
+Click Add.
+Review and create:
+Review all the details on the final page.
+Click Create Agent.
+
+Step 4: Run the Demo!
+Once the agent status is Prepared, click on its name (ProactiveSalesAssistant).
+You'll see a test chat window on the right.
+Enter the magic prompt:
+"Give me a full briefing for my upcoming meeting with Global Tech Inc. Include key contacts, open opportunities, and summarize our last two major project proposals for them."

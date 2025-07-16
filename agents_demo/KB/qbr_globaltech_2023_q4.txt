@@ -1,0 +1,6 @@
+Quarterly Business Review (QBR) - Global Tech Inc. - Q4 2023
+Summary of Last Quarter: We successfully completed the "Project Atlas" data analytics platform deployment. Customer satisfaction scores were high, but they noted a desire for more self-service features.
+Discussion Points:
+- Review performance of Project Atlas.
+- Discuss potential for "Project Titan" (cloud migration initiative).
+- Explore training needs for their new data science team.
