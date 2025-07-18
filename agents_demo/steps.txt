@@ -28,3 +28,5 @@ Once the agent status is Prepared, click on its name (ProactiveSalesAssistant).
 You'll see a test chat window on the right.
 Enter the magic prompt:
 "Give me a full briefing for my upcoming meeting with Global Tech Inc. Include key contacts, open opportunities, and summarize our last two major project proposals for them."
+
+#for demo
